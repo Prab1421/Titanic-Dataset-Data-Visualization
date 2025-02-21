@@ -21,6 +21,10 @@ This project visualizes the dataset using **D3.js** and **Dimple.js**, creating 
 - While 63% of I-Class passengers survived, only 24% from III-Class could make it.
 - 94% of the passengers embarking from Queenstown reserved III-class, while 51% of the passengers embarking from Cherbourg reserved I-class.
 
+![Data-Vis](data_vis1.png)
+
+![Data-Vis](data_vis2.png)
+
 ## Technologies Used
 - **HTML, CSS, JavaScript**: For structuring and styling the visualization
 - **D3.js**: Data-driven document manipulation
