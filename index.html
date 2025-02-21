@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Visualization of Titanic dataset - Prabhat Singh</title>
+  
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+  
+</head>
+
+<!--This is the initial HTML file that I have prepared from the the Titanic dataset.
+I have considered the four ordered features (Sex, Passenger Class, Port of Embarkation and survival),
+and tried to find relationship between them.
+-->
+
+<!--I have done the JavaScript coding in this HTML only, and have used external hosted sources 
+for calling d3js and dimplsjs files and datasets - so that this HML file can be viewed independently, 
+without copying/dowloading any other file.
+-->
+
+<body>
+
+
+
+<h1>Visualization of Titanic Dataset</h1>
+
+<!--1) Relation between passengers' survival and booking class...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg1 = dimple.newSvg("#chartContainer", 590, 400);    
+	var data1 = [
+	{"Survived" : 0, "Pclass": 1, "Passengers" : 80	},
+	{"Survived" : 0, "Pclass": 2, "Passengers" : 97	},
+	{"Survived" : 0, "Pclass": 3, "Passengers" : 372	},
+	{"Survived" : 1, "Pclass": 1, "Passengers" : 136	},
+	{"Survived" : 1, "Pclass": 2, "Passengers" : 87	},
+	{"Survived" : 1, "Pclass": 3, "Passengers" : 119	},
+	];
+		
+      var myChart1 = new dimple.chart(svg1, data1);
+      myChart1.setBounds(60, 30, 510, 330)
+      myChart1.addCategoryAxis("x", ["Survived"]);
+      myChart1.addMeasureAxis("y", "Passengers");
+      myChart1.addSeries("Pclass", dimple.plot.bar);
+      myChart1.addLegend(65, 10, 510, 20, "right");
+	  myChart1.ease = "bounce";
+	  myChart1.staggerDraw = true;
+      myChart1.draw(1000);
+    
+  </script>
+</div>
